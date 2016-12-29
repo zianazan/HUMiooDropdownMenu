@@ -83,7 +83,7 @@
     singleTap.cancelsTouchesInView = NO;
     
     self.shadowView = bgV;
-    [self addSubview:bgV];    
+    [self addSubview:bgV];
 }
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
@@ -95,6 +95,7 @@
     [self.backView2 removeFromSuperview];
     [self.backView3 removeFromSuperview];
     [self.shadowView removeFromSuperview];
+    [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
 }
 /**
  * 创建综合backView1
@@ -199,7 +200,7 @@
         btn.tag = 92001 + i;
         [btn addTarget:self action:@selector(arr2BtnClick:) forControlEvents:UIControlEventTouchUpInside];
         [btn setTitle:self.arr2[i] forState:UIControlStateNormal];
-
+        
         UIView *separatorView = [[UIView alloc] initWithFrame:CGRectMake(0, 39, [UIScreen mainScreen].bounds.size.width, 1)];
         separatorView.backgroundColor = HUMgrayTintColor;
         [btn addSubview:separatorView];
@@ -279,11 +280,14 @@
         if (sender.selected) {
             [self.shadowView removeFromSuperview];
             [self.backView1 removeFromSuperview];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
+            
         }else{
             [self.shadowView removeFromSuperview];
-
+            
             [self createshadowView:self.sframe];
             [self createbackView1:self.sframe];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
         }
         sender.selected = !sender.selected;
         btn2.selected = NO;
@@ -293,15 +297,17 @@
         [self.backView3 removeFromSuperview];
         [self.backView1Son1View removeFromSuperview];
         [self.backView1Son2View removeFromSuperview];
-
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
+        
         if (sender.selected) {
             [self.shadowView removeFromSuperview];
             [self.backView2 removeFromSuperview];
         }else{
             [self.shadowView removeFromSuperview];
-
+            
             [self createshadowView:self.sframe];
             [self createbackView2:self.sframe];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
         }
         sender.selected = !sender.selected;
         btn1.selected = NO;
@@ -311,41 +317,38 @@
         [self.backView2 removeFromSuperview];
         [self.backView1Son1View removeFromSuperview];
         [self.backView1Son2View removeFromSuperview];
+        [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
         
         if (sender.selected) {
             [self.shadowView removeFromSuperview];
             [self.backView3 removeFromSuperview];
         }else{
             [self.shadowView removeFromSuperview];
-
+            
             [self createshadowView:self.sframe];
             [self createbackView3:self.sframe];
+            [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
         }
         sender.selected = !sender.selected;
         btn2.selected = NO;
         btn1.selected = NO;
     }
-//    if (self.backView1.hidden == YES && self.backView2.hidden == YES && self.backView3.hidden == YES) {
-//        [self.shadowView removeFromSuperview];
-//    }else{
-//        [self createshadowView:self.sframe];
-//    }
 }
 #pragma mark - 按钮点击事件
 -(void)arr1BtnClick:(UIButton *)sender{
     if (sender.tag == 91001) {
         [self.backView1Son1View removeFromSuperview];
         [self.backView1Son2View removeFromSuperview];
-
+        
         self.ResultArr = [[NSMutableArray alloc]initWithArray:self.mainArr];
-
+        
         [self.backView1 removeFromSuperview];
         [self.backView2 removeFromSuperview];
         [self.backView3 removeFromSuperview];
         [self.shadowView removeFromSuperview];
         
         [self.firstTable reloadData];
-
+        
         UIButton *btn1 = (UIButton *)[self.firstTable viewWithTag:90001];
         UIButton *btn2 = (UIButton *)[self.firstTable viewWithTag:90002];
         UIButton *btn3 = (UIButton *)[self.firstTable viewWithTag:90003];
@@ -422,13 +425,13 @@
     btn1.selected = NO;
     btn2.selected = NO;
     btn3.selected = NO;
-
+    
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
 }
 -(void)arr3BtnClick:(UIButton *)sender{
     [self.ResultArr replaceObjectAtIndex:2 withObject:sender.titleLabel.text];
     [self.ResultArr replaceObjectAtIndex:1 withObject:self.mainArr[1]];
-
+    
     [self.backView1 removeFromSuperview];
     [self.backView2 removeFromSuperview];
     [self.backView3 removeFromSuperview];

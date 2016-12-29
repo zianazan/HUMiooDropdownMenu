@@ -5,6 +5,20 @@
 //  Created by 赵春生 on 2016/12/29.
 //  Copyright © 2016年 赵春生. All rights reserved.
 //
+#define screenWidth  [UIScreen mainScreen].bounds.size.width
+#define screenHeight [UIScreen mainScreen].bounds.size.height
+/**
+ *  状态栏(statusbar)
+ */
+#define statusHeight ([[UIApplication sharedApplication] statusBarFrame].size.height)
+/**
+ *  导航栏（navigationbar）
+ */
+#define navigationBarHeight (self.navigationController.navigationBar.frame.size.height)
+/**
+ *  tabBar高度
+ */
+#define tabBarHeight [[UITabBarController alloc] init].tabBar.frame.size.height
 #import "ViewController.h"
 #import "HUMiooDropdownMenu.h"
 
@@ -31,12 +45,27 @@
     self.HUM.frame = [UIScreen mainScreen].bounds;
     [self.view addSubview:self.HUM];
     
-    
+    /**
+     * 返回结果数组事件
+     */
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(HUMBtnClick:) name:@"HUMBtnClick" object:nil];
+    /**
+     * 改变HUM点击响应区域
+     */
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(HUMframe:) name:@"HUMframe" object:nil];
 }
-
 -(void)HUMBtnClick:(NSNotification *)text{
     NSLog(@"%@",[self.HUM returnResultArr]);
+//    self.HUM.frame = CGRectMake(0, 0, screenWidth, navigationBarHeight + statusHeight + 40);
+}
+-(void)HUMframe:(NSNotification *)text{
+    if ([text.userInfo[@"text"] isEqualToString:@"remove"]) {
+        NSLog(@"remove");
+//        self.HUM.frame = CGRectMake(0, 0, screenWidth, navigationBarHeight + statusHeight + 40);
+    }else{
+        NSLog(@"create");
+//        self.HUM.frame = CGRectMake(0, 0, screenWidth, screenHeight);
+    }
 }
 -(void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
