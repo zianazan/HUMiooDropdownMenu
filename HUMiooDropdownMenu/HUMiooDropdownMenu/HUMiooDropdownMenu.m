@@ -281,24 +281,35 @@
             [self.shadowView removeFromSuperview];
             [self.backView1 removeFromSuperview];
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
-            
+            [UIButton animateWithDuration:0.5 animations:^{
+                sender.imageView.transform = CGAffineTransformMakeRotation(0);
+            } completion:nil];
         }else{
             [self.shadowView removeFromSuperview];
             
             [self createshadowView:self.sframe];
             [self createbackView1:self.sframe];
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
+            [UIButton animateWithDuration:0.5 animations:^{
+                sender.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+            } completion:nil];
         }
         sender.selected = !sender.selected;
         btn2.selected = NO;
         btn3.selected = NO;
+        [UIButton animateWithDuration:0.5 animations:^{
+            btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+            btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
     }else if (sender.tag == 90002) {
         [self.backView1 removeFromSuperview];
         [self.backView3 removeFromSuperview];
         [self.backView1Son1View removeFromSuperview];
         [self.backView1Son2View removeFromSuperview];
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
-        
+        [UIButton animateWithDuration:0.5 animations:^{
+            sender.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
         if (sender.selected) {
             [self.shadowView removeFromSuperview];
             [self.backView2 removeFromSuperview];
@@ -308,17 +319,26 @@
             [self createshadowView:self.sframe];
             [self createbackView2:self.sframe];
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
+            [UIButton animateWithDuration:0.5 animations:^{
+                sender.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+            } completion:nil];
         }
         sender.selected = !sender.selected;
         btn1.selected = NO;
         btn3.selected = NO;
+        [UIButton animateWithDuration:0.5 animations:^{
+            btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+            btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
     }else {
         [self.backView1 removeFromSuperview];
         [self.backView2 removeFromSuperview];
         [self.backView1Son1View removeFromSuperview];
         [self.backView1Son2View removeFromSuperview];
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
-        
+        [UIButton animateWithDuration:0.5 animations:^{
+            sender.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
         if (sender.selected) {
             [self.shadowView removeFromSuperview];
             [self.backView3 removeFromSuperview];
@@ -328,10 +348,17 @@
             [self createshadowView:self.sframe];
             [self createbackView3:self.sframe];
             [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"create"}]];
+            [UIButton animateWithDuration:0.5 animations:^{
+                sender.imageView.transform = CGAffineTransformMakeRotation(M_PI);
+            } completion:nil];
         }
         sender.selected = !sender.selected;
         btn2.selected = NO;
         btn1.selected = NO;
+        [UIButton animateWithDuration:0.5 animations:^{
+            btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+            btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
     }
 }
 #pragma mark - 按钮点击事件
@@ -355,7 +382,11 @@
         btn1.selected = NO;
         btn2.selected = NO;
         btn3.selected = NO;
-        
+        [UIButton animateWithDuration:0.5 animations:^{
+            btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+            btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+            btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+        } completion:nil];
         [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
     }
     if (sender.tag == 91002) {
@@ -386,7 +417,11 @@
     btn1.selected = NO;
     btn2.selected = NO;
     btn3.selected = NO;
-    
+    [UIButton animateWithDuration:0.5 animations:^{
+        btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+    } completion:nil];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
 }
 -(void)fgArrBtnClick:(UIButton *)sender{
@@ -406,7 +441,11 @@
     btn1.selected = NO;
     btn2.selected = NO;
     btn3.selected = NO;
-    
+    [UIButton animateWithDuration:0.5 animations:^{
+        btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+    } completion:nil];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
 }
 -(void)arr2BtnClick:(UIButton *)sender{
@@ -425,7 +464,11 @@
     btn1.selected = NO;
     btn2.selected = NO;
     btn3.selected = NO;
-    
+    [UIButton animateWithDuration:0.5 animations:^{
+        btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+    } completion:nil];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
 }
 -(void)arr3BtnClick:(UIButton *)sender{
@@ -444,7 +487,11 @@
     btn1.selected = NO;
     btn2.selected = NO;
     btn3.selected = NO;
-    
+    [UIButton animateWithDuration:0.5 animations:^{
+        btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+    } completion:nil];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMBtnClick" object:nil userInfo:nil]];
 }
 -(NSMutableArray *)returnResultArr{

@@ -29,7 +29,7 @@
         btn1.userInteractionEnabled = YES;
         btn1.tag = 90001;
         [btn1 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_normal"] forState:UIControlStateNormal];
-        [btn1 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
+//        [btn1 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
 
         [btn1 layoutIfNeeded];
         btn1.imageEdgeInsets = UIEdgeInsetsMake(10, HUMwindow_w/3 - 10, 10, 20);
@@ -43,7 +43,7 @@
         btn2.userInteractionEnabled = YES;
         btn2.tag = 90002;
         [btn2 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_normal"] forState:UIControlStateNormal];
-        [btn2 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
+//        [btn2 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
         [btn2 layoutIfNeeded];
         btn2.imageEdgeInsets = UIEdgeInsetsMake(10, HUMwindow_w/3 - 10, 10, 20);
         [self addSubview:btn2];
@@ -56,7 +56,7 @@
         btn3.userInteractionEnabled = YES;
         btn3.tag = 90003;
         [btn3 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_normal"] forState:UIControlStateNormal];
-        [btn3 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
+//        [btn3 setImage:[UIImage imageNamed:@"HUMSmallTriangle_btn_Selected"] forState:UIControlStateSelected];
         [btn3 layoutIfNeeded];
         btn3.imageEdgeInsets = UIEdgeInsetsMake(10, HUMwindow_w/3 - 10, 10, 20);
         [self addSubview:btn3];

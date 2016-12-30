@@ -35,7 +35,7 @@
     NSMutableArray *mainArr = [NSMutableArray arrayWithObjects:@"综合",@"销量",@"价格", nil];
     NSMutableArray *arr1 = [NSMutableArray arrayWithObjects:@"综合",@"品牌",@"风格", nil];
     NSMutableArray *ppArr = [NSMutableArray arrayWithObjects:@"A",@"B",@"C", nil];
-    NSMutableArray *fgArr = [NSMutableArray arrayWithObjects:@"a",@"b",@"c",@"d", nil];
+    NSMutableArray *fgArr = [NSMutableArray arrayWithObjects:@"a",@"b",@"c",@"d",@"s",@"ss",@"sss", nil];
     NSMutableArray *arr2 = [NSMutableArray arrayWithObjects:@"默认综合排序",@"销量由低到高",@"销量由高到低", nil];
     NSMutableArray *arr3 = [NSMutableArray arrayWithObjects:@"默认综合排序",@"价格从低到高",@"价格从高到低", nil];
     
