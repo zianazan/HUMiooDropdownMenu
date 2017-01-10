@@ -89,12 +89,25 @@
     return YES;
 }
 -(void)handleSingleTap:(UITapGestureRecognizer *)sender {
+    UIButton *btn1 = (UIButton *)[self.firstTable viewWithTag:90001];
+    UIButton *btn2 = (UIButton *)[self.firstTable viewWithTag:90002];
+    UIButton *btn3 = (UIButton *)[self.firstTable viewWithTag:90003];
+    btn1.selected = NO;
+    btn2.selected = NO;
+    btn3.selected = NO;
+    [UIButton animateWithDuration:0.5 animations:^{
+        btn1.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn2.imageView.transform = CGAffineTransformMakeRotation(0);
+        btn3.imageView.transform = CGAffineTransformMakeRotation(0);
+    } completion:nil];
+    
     [self.backView1 removeFromSuperview];
     [self.backView1Son1View removeFromSuperview];
     [self.backView1Son2View removeFromSuperview];
     [self.backView2 removeFromSuperview];
     [self.backView3 removeFromSuperview];
     [self.shadowView removeFromSuperview];
+    
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:@"HUMframe" object:nil userInfo:@{@"text":@"remove"}]];
 }
 /**

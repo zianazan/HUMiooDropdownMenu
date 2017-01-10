@@ -566,6 +566,7 @@
 				B9EFCD471E14C13700961B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9EFCD481E14C13700961B97 /* Build configuration list for PBXNativeTarget "HUMiooDropdownMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +575,7 @@
 				B9EFCD4A1E14C13700961B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9EFCD4B1E14C13700961B97 /* Build configuration list for PBXNativeTarget "HUMiooDropdownMenuUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +584,7 @@
 				B9EFCD4D1E14C13700961B97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
