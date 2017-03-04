@@ -257,6 +257,7 @@
     firstTV.separatorStyle = UITableViewCellSeparatorStyleNone;
     firstTV.delegate = self;
     firstTV.dataSource = self;
+    firstTV.scrollEnabled = NO;
     [self.backView addSubview:firstTV];
     self.firstTable = firstTV;
 }
