@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BE4E33DCA2ABE0E36C5685F /* Pods_HUMiooDropdownMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 307E6B8C7F4AB70F5CE3473D /* Pods_HUMiooDropdownMenu.framework */; };
 		B9EFCD1D1E14C13700961B97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EFCD1C1E14C13700961B97 /* main.m */; };
 		B9EFCD201E14C13700961B97 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EFCD1F1E14C13700961B97 /* AppDelegate.m */; };
 		B9EFCD231E14C13700961B97 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B9EFCD221E14C13700961B97 /* ViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		307E6B8C7F4AB70F5CE3473D /* Pods_HUMiooDropdownMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HUMiooDropdownMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		39401B5262C62F9B4CE81A99 /* Pods-HUMiooDropdownMenu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUMiooDropdownMenu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HUMiooDropdownMenu/Pods-HUMiooDropdownMenu.debug.xcconfig"; sourceTree = "<group>"; };
 		B9EFCD181E14C13700961B97 /* HUMiooDropdownMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HUMiooDropdownMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9EFCD1C1E14C13700961B97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B9EFCD1E1E14C13700961B97 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		B9EFCD561E14C14300961B97 /* HUMSmallTriangle_btn_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUMSmallTriangle_btn_normal@3x.png"; sourceTree = "<group>"; };
 		B9EFCD571E14C14300961B97 /* HUMSmallTriangle_btn_Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUMSmallTriangle_btn_Selected@2x.png"; sourceTree = "<group>"; };
 		B9EFCD581E14C14300961B97 /* HUMSmallTriangle_btn_Selected@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUMSmallTriangle_btn_Selected@3x.png"; sourceTree = "<group>"; };
+		C22529444D4B13BDB6BD5312 /* Pods-HUMiooDropdownMenu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HUMiooDropdownMenu.release.xcconfig"; path = "Pods/Target Support Files/Pods-HUMiooDropdownMenu/Pods-HUMiooDropdownMenu.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE4E33DCA2ABE0E36C5685F /* Pods_HUMiooDropdownMenu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		875D38DA6550A055455885A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				307E6B8C7F4AB70F5CE3473D /* Pods_HUMiooDropdownMenu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88E2E29EE837AD422C193EBB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39401B5262C62F9B4CE81A99 /* Pods-HUMiooDropdownMenu.debug.xcconfig */,
+				C22529444D4B13BDB6BD5312 /* Pods-HUMiooDropdownMenu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B9EFCD0F1E14C13700961B97 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +125,8 @@
 				B9EFCD341E14C13700961B97 /* HUMiooDropdownMenuTests */,
 				B9EFCD3F1E14C13700961B97 /* HUMiooDropdownMenuUITests */,
 				B9EFCD191E14C13700961B97 /* Products */,
+				88E2E29EE837AD422C193EBB /* Pods */,
+				875D38DA6550A055455885A1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9EFCD451E14C13700961B97 /* Build configuration list for PBXNativeTarget "HUMiooDropdownMenu" */;
 			buildPhases = (
+				37B87F51D28BAE53391494E2 /* [CP] Check Pods Manifest.lock */,
 				B9EFCD141E14C13700961B97 /* Sources */,
 				B9EFCD151E14C13700961B97 /* Frameworks */,
 				B9EFCD161E14C13700961B97 /* Resources */,
+				311B8D3A40BB83D46678EF98 /* [CP] Embed Pods Frameworks */,
+				7F67ACFFE3A84F580A7891D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +279,7 @@
 					B9EFCD171E14C13700961B97 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = BN4S5684QZ;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					B9EFCD301E14C13700961B97 = {
@@ -320,6 +348,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		311B8D3A40BB83D46678EF98 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HUMiooDropdownMenu/Pods-HUMiooDropdownMenu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37B87F51D28BAE53391494E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7F67ACFFE3A84F580A7891D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HUMiooDropdownMenu/Pods-HUMiooDropdownMenu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9EFCD141E14C13700961B97 /* Sources */ = {
@@ -475,6 +551,7 @@
 		};
 		B9EFCD461E14C13700961B97 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39401B5262C62F9B4CE81A99 /* Pods-HUMiooDropdownMenu.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BN4S5684QZ;
@@ -482,11 +559,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs.zhao.HUMiooDropdownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		B9EFCD471E14C13700961B97 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C22529444D4B13BDB6BD5312 /* Pods-HUMiooDropdownMenu.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = BN4S5684QZ;
@@ -494,6 +573,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cs.zhao.HUMiooDropdownMenu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

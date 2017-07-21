@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-HUMiooDropdownMenu.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ReactiveSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Result.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7C67E5DBB557252E47BAA8B4C24D3F3E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D201CB195C7070135EEC9548FA539E09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DED9AACCFD24CDCD2C569B824F544FD2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E3BE4D20FE533E99DB4BE120EF35D2B7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
